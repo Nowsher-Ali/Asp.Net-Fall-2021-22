@@ -10,6 +10,9 @@ namespace Task2.Models.Tables
     public class Products
     {
         SqlConnection conn;
+
+        public object Session { get; private set; }
+
         public Products(SqlConnection conn)
         {
             this.conn = conn;
@@ -20,6 +23,27 @@ namespace Task2.Models.Tables
 
             conn.Open();
             string query = String.Format("insert into Products values ('{0}',{1},{2},'{3}')", p.Name, p.Qty, p.Price, p.Desc);
+            SqlCommand cmd = new SqlCommand(query, conn);
+            int r = cmd.ExecuteNonQuery();
+            conn.Close();
+        }
+
+        public void CheckOut(List<Product>Products)
+        {
+
+            conn.Open();
+            string orders = "";
+            int cnt = 0;
+            foreach (var p in Products) {
+                orders += p.Id;
+                if (cnt != Products.Count - 1)
+                {
+                    orders += ",";
+                }
+                cnt++;
+            }
+  
+            string query = String.Format("insert into Orders values ('{0}')", orders);
             SqlCommand cmd = new SqlCommand(query, conn);
             int r = cmd.ExecuteNonQuery();
             conn.Close();
@@ -89,5 +113,7 @@ namespace Task2.Models.Tables
             conn.Close();
             return products;
         }
+
+
     }
 }

@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using Task2.Models.Entities;
 using System.Data.SqlClient;
 using Task2.Models;
+using System.Web.Script.Serialization;
 
 namespace Task2.Controllers
 {
@@ -65,6 +66,56 @@ namespace Task2.Controllers
                 Database db = new Database();
                 db.Products.Delete(id);
             }
+            return RedirectToAction("Index");
+        }
+        [HttpGet]
+        public ActionResult AddToCart(int id)
+        {
+            Database db = new Database();
+            var p = db.Products.Get(id);
+     
+            if (Session["Cart"]==null)
+            {
+                List<Product> Products = new List<Product>();
+                Products.Add(p);
+                string json = new JavaScriptSerializer().Serialize(Products);
+                Session["Cart"] = json;
+            }
+            else
+            {
+                var d = new JavaScriptSerializer().Deserialize<List<Product>>(Session["Cart"].ToString());
+                d.Add(p);
+                string json = new JavaScriptSerializer().Serialize(d);
+                Session["Cart"] = json;
+            }
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult ViewCart()
+        {
+
+            if (Session["Cart"] == null)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                var d = new JavaScriptSerializer().Deserialize<List<Product>>(Session["Cart"].ToString());
+                return View(d);
+            }
+        }
+        public ActionResult CheckOut()
+        {
+            Database db = new Database();
+            var Products = new JavaScriptSerializer().Deserialize<List<Product>>(Session["Cart"].ToString());
+            db.Products.CheckOut(Products);
+            Session["Cart"] = null;
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult EmptyCart()
+        {
+            Session["Cart"] = null;
             return RedirectToAction("Index");
         }
     }
