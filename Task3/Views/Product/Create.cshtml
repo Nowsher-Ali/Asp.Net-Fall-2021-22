@@ -1,0 +1,10 @@
+﻿@model Task2.Models.Entities.Product
+
+<h2>Create</h2>
+<form action="/Product/Create" method="post">
+    Name: <input type="text" class="form-control" value="@Model.Name" name="Name" />
+    <br>Quantity: <input type="text" class="form-control" value="@Model.Qty" name="Qty" />
+    <br>Price: <input type="text" class="form-control" value="@Model.Price" name="Price" />
+    <br>Description: <input type="text" class="form-control" value="@Model.Desc" name="Desc" />
+    <input type="submit" value="Add" class="btn btn-success">
+</form>
