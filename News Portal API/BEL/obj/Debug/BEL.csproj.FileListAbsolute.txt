@@ -1,0 +1,6 @@
+E:\Semesters\Third Year\9th Semester\Advance .NET\Lab\News Portal (Final term)\BEL\bin\Debug\BEL.dll
+E:\Semesters\Third Year\9th Semester\Advance .NET\Lab\News Portal (Final term)\BEL\bin\Debug\BEL.pdb
+E:\Semesters\Third Year\9th Semester\Advance .NET\Lab\News Portal (Final term)\BEL\obj\Debug\BEL.csproj.AssemblyReference.cache
+E:\Semesters\Third Year\9th Semester\Advance .NET\Lab\News Portal (Final term)\BEL\obj\Debug\BEL.csproj.CoreCompileInputs.cache
+E:\Semesters\Third Year\9th Semester\Advance .NET\Lab\News Portal (Final term)\BEL\obj\Debug\BEL.dll
+E:\Semesters\Third Year\9th Semester\Advance .NET\Lab\News Portal (Final term)\BEL\obj\Debug\BEL.pdb

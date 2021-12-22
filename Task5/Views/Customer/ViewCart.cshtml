@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Task5.Models.Product>
+@{
+    ViewBag.Title = "ViewCart";
+}
+
+<h2>ViewCart</h2>
+<a class="btn btn-primary" href="/product/create">Add Product</a>
+<hr>
+<h3>All Products</h3>
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+    </tr>
+    @foreach (var p in Model)
+    {
+        <tr>
+            <td>@p.Id</td>
+            <td>@p.Name</td>
+            <td>@p.Price</td>
+        </tr>
+    }
+</table>
+<a class="btn btn-primary" href="/customer/checkout">Checkout</a>
+<a class="btn btn-primary" href="/product/emptycart">Empty Cart</a>

@@ -1,0 +1,10 @@
+E:\Semesters\Third Year\9th Semester\Advance .NET\Lab\News Portal (Final term)\DAL\bin\Debug\DAL.dll.config
+E:\Semesters\Third Year\9th Semester\Advance .NET\Lab\News Portal (Final term)\DAL\bin\Debug\DAL.dll
+E:\Semesters\Third Year\9th Semester\Advance .NET\Lab\News Portal (Final term)\DAL\bin\Debug\DAL.pdb
+E:\Semesters\Third Year\9th Semester\Advance .NET\Lab\News Portal (Final term)\DAL\bin\Debug\EntityFramework.dll
+E:\Semesters\Third Year\9th Semester\Advance .NET\Lab\News Portal (Final term)\DAL\bin\Debug\EntityFramework.xml
+E:\Semesters\Third Year\9th Semester\Advance .NET\Lab\News Portal (Final term)\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+E:\Semesters\Third Year\9th Semester\Advance .NET\Lab\News Portal (Final term)\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+E:\Semesters\Third Year\9th Semester\Advance .NET\Lab\News Portal (Final term)\DAL\obj\Debug\DAL.csproj.CopyComplete
+E:\Semesters\Third Year\9th Semester\Advance .NET\Lab\News Portal (Final term)\DAL\obj\Debug\DAL.dll
+E:\Semesters\Third Year\9th Semester\Advance .NET\Lab\News Portal (Final term)\DAL\obj\Debug\DAL.pdb
